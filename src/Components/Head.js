@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import image from "../images/tlo3.jpg";
+import image from "../images/przezroczyste.png";
 import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
@@ -14,6 +14,9 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(2),
     textAlign: "center",
     color: theme.palette.text.secondary
+  },
+  head: {
+    height: "100vh"
   },
   headTop: {
     height: "calc(60vh - 60px)",
@@ -64,7 +67,7 @@ const Head = () => {
   return (
     <>
       <div className={classes.root}>
-        <Grid container spacing={0}>
+        <Grid container spacing={0} className={classes.head}>
           <Grid item xs={12}>
             <div className={classes.headTop}>
               <div className={classes.leftHead}>
@@ -92,7 +95,7 @@ const Head = () => {
               </Typography>
             </div>
           </Grid>
-          <Grid item xs={6}>
+          {/* <Grid item xs={6}>
             <Paper className={classes.paper}>xs=6</Paper>
           </Grid>
           <Grid item xs={6}>
@@ -109,7 +112,7 @@ const Head = () => {
           </Grid>
           <Grid item xs={3}>
             <Paper className={classes.paper}>xs=3</Paper>
-          </Grid>
+          </Grid> */}
         </Grid>
       </div>
     </>
