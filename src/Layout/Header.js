@@ -42,9 +42,6 @@ const useStyles = makeStyles({
   },
   fullList: {
     width: "auto"
-  },
-  iconStyle: {
-    marginRight: "10px"
   }
 });
 
@@ -81,11 +78,11 @@ export default function SwipeableTemporaryDrawer() {
           (text, index) => (
             <ListItem button key={text}>
               <AnchorLink href={"#" + text}>
+                <ListItemIcon>{icons[index].icon}</ListItemIcon>
                 <Link>
                   <ListItemText primary={text} />
                 </Link>
               </AnchorLink>
-              <ListItemIcon>{icons[index].icon}</ListItemIcon>
             </ListItem>
           )
         )}

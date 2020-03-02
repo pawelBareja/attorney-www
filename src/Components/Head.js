@@ -8,12 +8,13 @@ import { Typography } from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    margin: "0 10px"
+    margin: "30px 10px"
   },
   paper: {
     padding: theme.spacing(2),
     textAlign: "center",
-    color: theme.palette.text.secondary
+    // color: theme.palette.text.secondary,
+    boxShadow: "none"
   },
   head: {
     height: "100vh"
@@ -34,6 +35,8 @@ const useStyles = makeStyles(theme => ({
     width: "30vw",
     height: "65vh",
     backgroundColor: "#75DDDD",
+    background:
+      "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(9,9,121,1) 42%, rgba(0,212,255,1) 100%)",
     opacity: "0.8",
     position: "relative",
     borderRadius: "4px 0 4px 4px"
@@ -84,7 +87,7 @@ const Head = () => {
           <Grid item xs={12}>
             <div>
               <Typography
-                variant="h4"
+                variant="h2"
                 component="h2"
                 style={{ marginTop: "120px" }}
               >

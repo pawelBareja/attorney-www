@@ -12,22 +12,26 @@ import Grid from "@material-ui/core/Grid";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    margin: "0 10px"
+    margin: "30px 0"
   },
   button: {
     marginTop: theme.spacing(1),
     marginRight: theme.spacing(1)
   },
   actionsContainer: {
-    marginBottom: theme.spacing(2)
+    // marginBottom: theme.spacing(2)
   },
   resetContainer: {
-    padding: theme.spacing(3)
+    // padding: theme.spacing(3)
   },
   paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary
+    // padding: theme.spacing(2),
+    textAlign: "left",
+    // color: theme.palette.text.secondary,
+    boxShadow: "none"
+  },
+  title: {
+    margin: "0 20px"
   }
 }));
 
@@ -72,14 +76,14 @@ export default function VerticalLinearStepper() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={2}>
+      <Grid container>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
             <Typography
-              variant="h5"
-              component="h5"
-              color="textSecondary"
-              className={classes.greenBox}
+              className={classes.title}
+              align="left"
+              variant="h3"
+              component="h3"
             >
               Jak to działa?
             </Typography>

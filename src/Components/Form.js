@@ -10,10 +10,12 @@ import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    "& > *": {
-      margin: theme.spacing(1),
-      width: "100%"
-    }
+    flexGrow: 1,
+    margin: "30px 20px"
+  },
+  form: {
+    width: "100%",
+    margin: "10px 0"
   }
 }));
 
@@ -22,40 +24,52 @@ export default function BasicTextFields() {
 
   return (
     <>
-      <Typography gutterBottom variant="h5" component="h2">
-        Kancelaria
-      </Typography>
-      <Typography gutterBottom variant="p" component="p">
-        Wypełnij formularz, skontaktujemy się z Wami w ciągu dwóch dni roboczycg
-      </Typography>
-      <Grid container spacing={0} justify="center">
-        <Grid item md={10}>
-          <form className={classes.root} noValidate autoComplete="off">
-            <TextField
-              id="outlined-basic"
-              label="Imię & Nazwisko"
-              variant="outlined"
-            />
-            <TextField
-              id="outlined-basic"
-              label="Numer Telefonu"
-              variant="outlined"
-            />
-            <TextField id="outlined-basic" label="Email" variant="outlined" />
-            <TextareaAutosize
-              aria-label="minimum height"
-              rowsMin={8}
-              placeholder="Napisz wiadomość"
-            />
-            <FormControlLabel
-              value="start"
-              control={<Checkbox color="primary" />}
-              label="Start"
-              labelPlacement="start"
-            />
-          </form>
+      <div className={classes.root}>
+        <Typography gutterBottom variant="h3" component="h3">
+          Kontakt
+        </Typography>
+        <Typography gutterBottom variant="p" component="p">
+          Wypełnij formularz, skontaktujemy się z Wami w ciągu dwóch dni
+          roboczycg
+        </Typography>
+        <Grid container spacing={0} justify="center">
+          <Grid item md={10}>
+            <form noValidate autoComplete="off">
+              <TextField
+                className={classes.form}
+                id="outlined-basic"
+                label="Imię & Nazwisko"
+                variant="outlined"
+              />
+              <TextField
+                className={classes.form}
+                id="outlined-basic"
+                label="Numer Telefonu"
+                variant="outlined"
+              />
+              <TextField
+                className={classes.form}
+                id="outlined-basic"
+                label="Email"
+                variant="outlined"
+              />
+              <TextareaAutosize
+                className={classes.form}
+                aria-label="minimum height"
+                rowsMin={8}
+                placeholder="Napisz wiadomość"
+              />
+              <FormControlLabel
+                className={classes.form}
+                value="start"
+                control={<Checkbox color="primary" />}
+                label="Start"
+                labelPlacement="start"
+              />
+            </form>
+          </Grid>
         </Grid>
-      </Grid>
+      </div>
     </>
   );
 }

@@ -12,10 +12,15 @@ import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: "100%"
+    flexGrow: 1,
+    margin: "30px 10px",
+    boxShadow: "none"
   },
   media: {
     height: 140
+  },
+  button: {
+    marginTop: "20px"
   }
 });
 
@@ -26,19 +31,24 @@ export default function MediaCard() {
     <Card id={"Kancelaria"} className={classes.root}>
       <CardActionArea>
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h3" component="h3">
             Kancelaria
           </Typography>
           <Typography
             variant="body2"
-            color="textSecondary"
+            // color="textSecondary"
             component="p"
             gutterBottom
           >
             Lizards are a widespread group of squamate reptiles, with over 6,000
             species, ranging across all continents except Antarctica. They
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography
+            gutterBottom
+            variant="body2"
+            // color="textSecondary"
+            component="p"
+          >
             Lizards are a widespread group of squamate reptiles, with over 6,000
             species, ranging across all continents except Antarctica. They
             should be easy to scan for relevant and actionable information.
@@ -48,7 +58,11 @@ export default function MediaCard() {
 
           <AnchorLink href={"#Kontakt"}>
             <Link>
-              <Button variant="outlined" color="primary">
+              <Button
+                className={classes.button}
+                variant="outlined"
+                color="primary"
+              >
                 Skontaktuj się z nami
               </Button>
             </Link>
