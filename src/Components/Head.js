@@ -2,66 +2,53 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-import image from "../images/przezroczyste.png";
+import image from "../images/pokrywanie2.jpg";
+import imageBig from "../images/1600x900.jpg";
 import { Typography } from "@material-ui/core";
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
+import chevron from "../images/chevron.png";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    margin: "30px 10px"
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    // color: theme.palette.text.secondary,
-    boxShadow: "none"
+    margin: "-8px"
   },
   head: {
-    height: "100vh"
-  },
-  headTop: {
-    height: "calc(60vh - 60px)",
-    marginTop: "44px",
-    borderRadius: "4px",
-    // background: "#009efd",
-    // backgroundImage: `url(${image})`,
-    background: `url(${image})`,
+    height: "100vh",
+    background: `url(${imageBig})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover"
-    // border: "1px solid red"
   },
-  leftHead: {
-    width: "30vw",
-    height: "65vh",
-    backgroundColor: "#75DDDD",
-    background:
-      "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(9,9,121,1) 42%, rgba(0,212,255,1) 100%)",
-    opacity: "0.8",
-    position: "relative",
-    borderRadius: "4px 0 4px 4px"
+  headTop: {
+    margin: "60px 28px",
+    color: "#fff",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between"
   },
-  greenBox: {
+  headBottom: {
     position: "absolute",
-    bottom: "10px",
-    left: "10px",
-    color: "#fff"
-    // "&::after": {
-    //   content: `''`,
-    //   position: "absolute",
-    //   left: "0",
-    //   top: "0",
-    //   width: "0",
-    //   height: "0",
-    //   border: "50px solid transparent",
-    //   borderTopColor: "red"
-    // }
+    bottom: "100px",
+    left: "0",
+    color: "#fff",
+    margin: "0 28px",
+    padding: "10px 0",
+    borderBottom: "3px solid #fff"
+  },
+  scroll: {
+    // width: "50px",
+    // height: "50px",
+    // background: "#fff",
+    // border: "none",
+    position: "absolute",
+    bottom: "28px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    borderRadius: "4px",
+    color: "rgba(1,1,1,0.1)"
   }
-
-  //   headBottom: {
-  //     height: "50vh"
-  //     border: "1px solid blue"
-  //   }
 }));
 
 const Head = () => {
@@ -72,50 +59,21 @@ const Head = () => {
       <div className={classes.root}>
         <Grid container spacing={0} className={classes.head}>
           <Grid item xs={12}>
-            <div className={classes.headTop}>
-              <div className={classes.leftHead}>
-                <Typography
-                  variant="h6"
-                  component="h2"
-                  className={classes.greenBox}
-                >
-                  Paweł Sterna
-                </Typography>
-              </div>
-            </div>
+            <div className={classes.headTop}></div>
           </Grid>
           <Grid item xs={12}>
-            <div>
-              <Typography
-                variant="h2"
-                component="h2"
-                style={{ marginTop: "120px" }}
-              >
-                Radca Prawny
-              </Typography>
-              <Typography variant="h6" component="h2">
+            <div className={classes.headBottom}>
+              <Typography variant="overline" component="h2">
                 Paweł Sterna
+              </Typography>
+              <Typography variant="h3" component="h1">
+                Radca Prawny
               </Typography>
             </div>
           </Grid>
-          {/* <Grid item xs={6}>
-            <Paper className={classes.paper}>xs=6</Paper>
-          </Grid>
-          <Grid item xs={6}>
-            <Paper className={classes.paper}>xs=6</Paper>
-          </Grid>
-          <Grid item xs={3}>
-            <Paper className={classes.paper}>xs=3</Paper>
-          </Grid>
-          <Grid item xs={3}>
-            <Paper className={classes.paper}>xs=3</Paper>
-          </Grid>
-          <Grid item xs={3}>
-            <Paper className={classes.paper}>xs=3</Paper>
-          </Grid>
-          <Grid item xs={3}>
-            <Paper className={classes.paper}>xs=3</Paper>
-          </Grid> */}
+          <AnchorLink href="#oferta">
+            <img src={chevron} alt="chevron" className={classes.scroll} />
+          </AnchorLink>
         </Grid>
       </div>
     </>

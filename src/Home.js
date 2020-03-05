@@ -11,19 +11,15 @@ import ScrollToTop from "./Components/ScrollToTop";
 function Home() {
   return (
     <>
-      <div
-      //  style={{ backgroundColor: "rgba(187, 222, 240, 0.4)" }}
-      >
-        <Header />
-        <Head />
-        <Offer />
-        <HowItWorks />
-        <About />
-        <Form />
-        <Footer />
+      <Header />
+      <Head />
+      <Offer />
+      <HowItWorks />
+      <About />
+      <Form />
+      <Footer />
 
-        <ScrollToTop />
-      </div>
+      <ScrollToTop />
     </>
   );
 }

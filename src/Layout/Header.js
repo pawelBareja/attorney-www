@@ -42,16 +42,26 @@ const useStyles = makeStyles({
   },
   fullList: {
     width: "auto"
+  },
+  nav: {
+    position: "fixed",
+    top: "0",
+    right: "0"
+  },
+  button: {
+    margin: "10px 20px",
+    color: "#fff",
+    fontSize: "20px"
   }
 });
 
 export default function SwipeableTemporaryDrawer() {
   const classes = useStyles();
   const [state, setState] = React.useState({
-    top: false,
-    left: false,
-    bottom: false,
-    right: false
+    // top: false,
+    // left: false,
+    // bottom: false,
+    left: false
   });
 
   const toggleDrawer = (side, open) => event => {
@@ -108,19 +118,19 @@ export default function SwipeableTemporaryDrawer() {
   );
 
   return (
-    <div>
-      <Button onClick={toggleDrawer("right", true)}>
+    <div className={classes.nav}>
+      <Button className={classes.button} onClick={toggleDrawer("left", true)}>
         <MenuIcon />
         Menu
       </Button>
 
       <SwipeableDrawer
-        anchor="right"
-        open={state.right}
-        onClose={toggleDrawer("right", false)}
-        onOpen={toggleDrawer("right", true)}
+        anchor="left"
+        open={state.left}
+        onClose={toggleDrawer("left", false)}
+        onOpen={toggleDrawer("left", true)}
       >
-        {sideList("right")}
+        {sideList("left")}
       </SwipeableDrawer>
     </div>
   );
