@@ -17,6 +17,7 @@ import LocalOfferIcon from "@material-ui/icons/LocalOffer";
 import ImageIcon from "@material-ui/icons/Image";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import Link from "@material-ui/core/Link";
+import { Typography } from "@material-ui/core";
 
 const icons = [
   {
@@ -46,12 +47,25 @@ const useStyles = makeStyles({
   nav: {
     position: "fixed",
     top: "0",
-    right: "0"
+    left: "0"
   },
   button: {
     margin: "10px 20px",
     color: "#fff",
-    fontSize: "20px"
+    fontSize: "16px",
+    fontWeight: "100",
+    "&::after": {
+      content: "'MENU'",
+      display: "block",
+      position: "absolute",
+
+      // height: "2px",
+      // width: "60px",
+      left: "10px",
+      // transform: "translateX(-50%)",
+      bottom: "-12px"
+      // background: "#00c2ff"
+    }
   }
 });
 
@@ -120,8 +134,10 @@ export default function SwipeableTemporaryDrawer() {
   return (
     <div className={classes.nav}>
       <Button className={classes.button} onClick={toggleDrawer("left", true)}>
-        <MenuIcon />
-        Menu
+        <MenuIcon style={{ fontSize: "50px" }} />
+        {/* <Typography variant="h3" component="h3">
+          Menu
+        </Typography> */}
       </Button>
 
       <SwipeableDrawer

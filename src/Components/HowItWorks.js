@@ -14,24 +14,38 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     margin: "30px 0"
   },
+  title: {
+    margin: "50px 10px",
+    wordWrap: "break-word",
+    position: "relative",
+    "&::before": {
+      content: "''",
+      display: "block",
+      position: "absolute",
+      height: "2px",
+      width: "60px",
+      left: "50%",
+      transform: "translateX(-50%)",
+      bottom: "-20px",
+      background: "#00c2ff"
+    }
+  },
   button: {
-    marginTop: theme.spacing(1),
-    marginRight: theme.spacing(1)
+    marginTop: theme.spacing(2),
+    marginRight: theme.spacing(2)
+    // color: "#fff"
   },
   actionsContainer: {
     // marginBottom: theme.spacing(2)
   },
   resetContainer: {
-    // padding: theme.spacing(3)
+    padding: theme.spacing(3)
   },
   paper: {
     // padding: theme.spacing(2),
     textAlign: "left",
     // color: theme.palette.text.secondary,
     boxShadow: "none"
-  },
-  title: {
-    margin: "0 20px"
   }
 }));
 
@@ -79,12 +93,7 @@ export default function VerticalLinearStepper() {
       <Grid container>
         <Grid item xs={12}>
           <Paper className={classes.paper}>
-            <Typography
-              className={classes.title}
-              align="left"
-              variant="h3"
-              component="h3"
-            >
+            <Typography className={classes.title} variant="h3" component="h3">
               Jak to działa?
             </Typography>
 
@@ -99,6 +108,9 @@ export default function VerticalLinearStepper() {
                         <Button
                           disabled={activeStep === 0}
                           onClick={handleBack}
+                          // className={classes.button}
+                          variant="outlined"
+                          color="inherit"
                           className={classes.button}
                         >
                           Powrót
@@ -108,6 +120,7 @@ export default function VerticalLinearStepper() {
                           color="primary"
                           onClick={handleNext}
                           className={classes.button}
+                          style={{ color: "#fff" }}
                         >
                           {activeStep === steps.length - 1
                             ? "Zakończ"
@@ -124,8 +137,13 @@ export default function VerticalLinearStepper() {
                 <Typography>
                   All steps completed - you&apos;re finished
                 </Typography>
-                <Button onClick={handleReset} className={classes.button}>
-                  Reset
+                <Button
+                  onClick={handleReset}
+                  className={classes.button}
+                  color="primary"
+                  variant="outlined"
+                >
+                  Jeszcze raz
                 </Button>
               </Paper>
             )}

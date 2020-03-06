@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
     left: "0",
     color: "#fff",
     margin: "0 28px",
-    padding: "10px 0",
+    padding: "10px 0 20px 0",
     borderBottom: "3px solid #fff"
   },
   scroll: {
@@ -43,10 +43,10 @@ const useStyles = makeStyles(theme => ({
     // background: "#fff",
     // border: "none",
     position: "absolute",
-    bottom: "28px",
+    bottom: "0",
     left: "50%",
     transform: "translateX(-50%)",
-    borderRadius: "4px",
+    borderRadius: "4px 4px 0 0",
     color: "rgba(1,1,1,0.1)"
   }
 }));
@@ -66,8 +66,15 @@ const Head = () => {
               <Typography variant="overline" component="h2">
                 Paweł Sterna
               </Typography>
-              <Typography variant="h3" component="h1">
-                Radca Prawny
+              <Typography variant="h1" component="h1">
+                Radca
+              </Typography>
+              <Typography
+                variant="h1"
+                component="h1"
+                style={{ fontWeight: "600" }}
+              >
+                Prawny
               </Typography>
             </div>
           </Grid>

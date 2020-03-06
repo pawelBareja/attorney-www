@@ -13,6 +13,22 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     margin: "30px 20px"
   },
+  title: {
+    margin: "50px 10px",
+    wordWrap: "break-word",
+    position: "relative",
+    "&::before": {
+      content: "''",
+      display: "block",
+      position: "absolute",
+      height: "2px",
+      width: "60px",
+      left: "50%",
+      transform: "translateX(-50%)",
+      bottom: "-20px",
+      background: "#00c2ff"
+    }
+  },
   form: {
     width: "100%",
     margin: "10px 0"
@@ -25,7 +41,12 @@ export default function BasicTextFields() {
   return (
     <>
       <div className={classes.root}>
-        <Typography gutterBottom variant="h3" component="h3">
+        <Typography
+          gutterBottom
+          variant="h3"
+          component="h3"
+          className={classes.title}
+        >
           Kontakt
         </Typography>
         <Typography gutterBottom variant="p" component="p">

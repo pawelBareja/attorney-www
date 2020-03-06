@@ -24,12 +24,20 @@ const useStyles = makeStyles({
     margin: "10px"
   },
   title: {
-    // border: "1px solid red",
     margin: "50px 10px",
-    fontSize: "50px",
-    fontWeight: "900",
     wordWrap: "break-word",
-    maxWidth: "330px"
+    position: "relative",
+    "&::before": {
+      content: "''",
+      display: "block",
+      position: "absolute",
+      height: "2px",
+      width: "60px",
+      left: "50%",
+      transform: "translateX(-50%)",
+      bottom: "-20px",
+      background: "#00c2ff"
+    }
   },
 
   slide: {
@@ -60,7 +68,7 @@ export default function MediaCard() {
       <div id="oferta" className={classes.root}>
         <Grid container spacing={0}>
           <Grid item xs={12} id={"Oferta"}>
-            <Typography className={classes.title} variant="h1" component="h3">
+            <Typography className={classes.title} variant="h3" component="h3">
               W czym pomagamy?
             </Typography>
           </Grid>
