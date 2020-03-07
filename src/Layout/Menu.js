@@ -52,7 +52,7 @@ const useStyles = makeStyles({
   button: {
     margin: "10px 20px",
     color: "#fff",
-    fontSize: "16px",
+    fontSize: "14px",
     fontWeight: "100",
     "&::after": {
       content: "'MENU'",
@@ -61,7 +61,7 @@ const useStyles = makeStyles({
 
       // height: "2px",
       // width: "60px",
-      left: "10px",
+      left: "15px",
       // transform: "translateX(-50%)",
       bottom: "-12px"
       // background: "#00c2ff"
@@ -117,7 +117,7 @@ export default function SwipeableTemporaryDrawer() {
       <List>
         {["Kontakt"].map((text, index) => (
           <ListItem button key={text}>
-            <AnchorLink href="#Kontakt">
+            <AnchorLink href="#kontakt">
               <Link>
                 <ListItemText primary={text} />
               </Link>

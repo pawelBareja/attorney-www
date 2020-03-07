@@ -1,100 +1,86 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import Box from "@material-ui/core/Box";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import Link from "@material-ui/core/Link";
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return (
-    <Typography
-      component="div"
-      role="tabpanel"
-      hidden={value !== index}
-      id={`scrollable-auto-tabpanel-${index}`}
-      aria-labelledby={`scrollable-auto-tab-${index}`}
-      {...other}
-    >
-      {value === index && <Box p={3}>{children}</Box>}
-    </Typography>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.any.isRequired,
-  value: PropTypes.any.isRequired
-};
-
-function a11yProps(index) {
-  return {
-    id: `scrollable-auto-tab-${index}`,
-    "aria-controls": `scrollable-auto-tabpanel-${index}`
-  };
-}
-
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
+  footer: {
+    background: "#444",
+    color: "#fff"
+  },
   root: {
     flexGrow: 1,
-    width: "100%",
-    backgroundColor: theme.palette.background.paper
+    margin: "30px 20px",
+    boxShadow: "none",
+    background: "#444"
+  },
+  title: {
+    margin: "50px 10px",
+    wordWrap: "break-word",
+    position: "relative",
+    color: "#fff",
+    "&::before": {
+      content: "''",
+      display: "block",
+      position: "absolute",
+      height: "2px",
+      width: "60px",
+      left: "50%",
+      transform: "translateX(-50%)",
+      bottom: "-20px",
+      background: "#00c2ff"
+    }
+  },
+  media: {
+    height: 140
   }
-}));
+});
 
-export default function ScrollableTabsButtonAuto() {
+export default function Footer() {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   return (
-    <div className={classes.root}>
-      <AppBar position="static" color="default">
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          indicatorColor="primary"
-          textColor="primary"
-          variant="scrollable"
-          scrollButtons="auto"
-          aria-label="scrollable auto tabs example"
+    <div className={classes.footer}>
+      <Card id={"Kancelaria"} className={classes.root}>
+        <Typography className={classes.title} variant="h3" component="h3">
+          Dlaczego My?
+        </Typography>
+        <Typography
+          variant="body2"
+          component="p"
+          gutterBottom
+          style={{ color: "#fff" }}
         >
-          <Tab label="Kancelaria" {...a11yProps(0)} />
-          <Tab label="Dane kontaktowe" {...a11yProps(1)} />
-          <Tab label="Szybkie menu" {...a11yProps(2)} />
-          {/* <Tab label="Item Four" {...a11yProps(3)} />
-          <Tab label="Item Five" {...a11yProps(4)} />
-          <Tab label="Item Six" {...a11yProps(5)} />
-          <Tab label="Item Seven" {...a11yProps(6)} /> */}
-        </Tabs>
-      </AppBar>
-      <TabPanel value={value} index={0}>
-        Item One
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        Item Two
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel>
-      {/* <TabPanel value={value} index={3}>
-        Item Four
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        Item Five
-      </TabPanel>
-      <TabPanel value={value} index={5}>
-        Item Six
-      </TabPanel>
-      <TabPanel value={value} index={6}>
-        Item Seven
-      </TabPanel> */}
+          <strong>
+            Nadzwyczajna skuteczność działań prawnych. Obsługa osób fizycznych i
+            firm. Prawo cywilne. Prawo pracy. Prawo karne Rozwód. Prawo
+            rodzinne. Odszkodowania. Prawo gospodarcze. Usługi: Pozyskiwanie
+            dowodów
+          </strong>
+        </Typography>
+        <Typography
+          gutterBottom
+          variant="body2"
+          component="p"
+          style={{ color: "#fff" }}
+        >
+          Nadzwyczajna skuteczność działań prawnych. Obsługa osób fizycznych i
+          firm. Prawo cywilne. Prawo pracy. Prawo karne. Rozwód. Prawo rodzinne.
+          Odszkodowania. Prawo gospodarcze. Usługi: Pozyskiwanie dowodów,
+          Obserwacje osobowe, Windykacja, Sprawy gospodarcze.Nadzwyczajna
+          skuteczność działań prawnych. Obsługa osób fizycznych i firm. Prawo
+          cywilne. Prawo pracy. Prawo karne. Rozwód. Prawo rodzinne.
+          Odszkodowania. Prawo gospodarcze. Usługi: Pozyskiwanie dowodów,
+          Obserwacje osobowe, Windykacja, Sprawy gospodarcze.
+        </Typography>
+      </Card>
     </div>
   );
 }

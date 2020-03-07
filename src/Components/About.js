@@ -43,21 +43,27 @@ export default function MediaCard() {
   return (
     <Card id={"Kancelaria"} className={classes.root}>
       <Typography className={classes.title} variant="h3" component="h3">
-        Kancelaria
+        Dlaczego My?
       </Typography>
       <Typography variant="body2" component="p" gutterBottom>
-        Lizards are a widespread group of squamate reptiles, with over 6,000
-        species, ranging across all continents except Antarctica. They
+        <strong>
+          Nadzwyczajna skuteczność działań prawnych. Obsługa osób fizycznych i
+          firm. Prawo cywilne. Prawo pracy. Prawo karne Rozwód. Prawo rodzinne.
+          Odszkodowania. Prawo gospodarcze. Usługi: Pozyskiwanie dowodów
+        </strong>
       </Typography>
       <Typography gutterBottom variant="body2" component="p">
-        Lizards are a widespread group of squamate reptiles, with over 6,000
-        species, ranging across all continents except Antarctica. They should be
-        easy to scan for relevant and actionable information. Elements, like
-        text and images, should be placed on them in a way that clearly
-        indicates hierarchy.
+        Nadzwyczajna skuteczność działań prawnych. Obsługa osób fizycznych i
+        firm. Prawo cywilne. Prawo pracy. Prawo karne. Rozwód. Prawo rodzinne.
+        Odszkodowania. Prawo gospodarcze. Usługi: Pozyskiwanie dowodów,
+        Obserwacje osobowe, Windykacja, Sprawy gospodarcze.Nadzwyczajna
+        skuteczność działań prawnych. Obsługa osób fizycznych i firm. Prawo
+        cywilne. Prawo pracy. Prawo karne. Rozwód. Prawo rodzinne.
+        Odszkodowania. Prawo gospodarcze. Usługi: Pozyskiwanie dowodów,
+        Obserwacje osobowe, Windykacja, Sprawy gospodarcze.
       </Typography>
 
-      <AnchorLink href={"#Kontakt"} style={{ textDecoration: "none" }}>
+      <AnchorLink href={"#kontakt"} style={{ textDecoration: "none" }}>
         <Link>
           <Button
             className={classes.button}

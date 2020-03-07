@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "./Layout/Header";
-import Head from "./Components/Head";
+import Menu from "./Layout/Menu";
+import Header from "./Components/Header";
 import Offer from "./Components/Offer";
 import HowItWorks from "./Components/HowItWorks";
 import Footer from "./Layout/Footer";
@@ -27,9 +27,15 @@ const theme = createMuiTheme({
     p: {
       fontSize: "16px"
     },
+    body1: {
+      fontSize: "16px",
+      fontWeight: "300",
+      lineHeight: "1.6"
+    },
     body2: {
       fontSize: "16px",
-      fontWeight: "300"
+      fontWeight: "300",
+      lineHeight: "1.6"
     }
   },
   palette: {
@@ -40,14 +46,15 @@ const theme = createMuiTheme({
 });
 
 function Home() {
+  console.log(theme);
   return (
     <>
       <ThemeProvider theme={theme}>
+        <Menu />
         <Header />
-        <Head />
         <Offer />
-        <HowItWorks />
         <About />
+        <HowItWorks />
         <Form />
         <Footer />
         <ScrollToTop />

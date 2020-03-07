@@ -34,8 +34,15 @@ const useStyles = makeStyles(theme => ({
     left: "0",
     color: "#fff",
     margin: "0 28px",
-    padding: "10px 0 20px 0",
-    borderBottom: "3px solid #fff"
+    padding: "10px 0 20px 0"
+    // borderBottom: "3px solid #fff"
+  },
+  separator: {
+    display: "block",
+    width: "120px",
+    height: "2px",
+    background: "#fff",
+    margin: "5px"
   },
   scroll: {
     // width: "50px",
@@ -43,7 +50,7 @@ const useStyles = makeStyles(theme => ({
     // background: "#fff",
     // border: "none",
     position: "absolute",
-    bottom: "0",
+    bottom: "-2px",
     left: "50%",
     transform: "translateX(-50%)",
     borderRadius: "4px 4px 0 0",
@@ -51,7 +58,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Head = () => {
+const Header = () => {
   const classes = useStyles();
 
   return (
@@ -63,9 +70,14 @@ const Head = () => {
           </Grid>
           <Grid item xs={12}>
             <div className={classes.headBottom}>
-              <Typography variant="overline" component="h2">
+              <Typography
+                variant="body2"
+                component="h2"
+                style={{ marginLeft: "5px" }}
+              >
                 Paweł Sterna
               </Typography>
+              <div className={classes.separator}></div>
               <Typography variant="h1" component="h1">
                 Radca
               </Typography>
@@ -87,4 +99,4 @@ const Head = () => {
   );
 };
 
-export default Head;
+export default Header;

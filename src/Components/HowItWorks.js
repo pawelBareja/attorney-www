@@ -47,6 +47,9 @@ const useStyles = makeStyles(theme => ({
     // color: theme.palette.text.secondary,
     boxShadow: "none"
   }
+  // icon: {
+  //   background: "red"
+  // }
 }));
 
 function getSteps() {
@@ -56,16 +59,11 @@ function getSteps() {
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return `For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`;
+      return `Zadzwońlub napisz do nas wypełniając poniższy formularz, opisz swój problem jak najdokładniej...`;
     case 1:
-      return "An ad group contains one or more ads which target a shared set of keywords.";
+      return "Przygotujemy dla Ciebie plana działania z propozycha cenowa blabla...";
     case 2:
-      return `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`;
+      return `Uzgodnimy szczegłóy i popdiszemy umowe`;
     default:
       return "Unknown step";
   }
@@ -134,9 +132,7 @@ export default function VerticalLinearStepper() {
             </Stepper>
             {activeStep === steps.length && (
               <Paper square elevation={0} className={classes.resetContainer}>
-                <Typography>
-                  All steps completed - you&apos;re finished
-                </Typography>
+                <Typography>To wszystko!</Typography>
                 <Button
                   onClick={handleReset}
                   className={classes.button}

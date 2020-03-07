@@ -31,7 +31,8 @@ const useStyles = makeStyles(theme => ({
   },
   form: {
     width: "100%",
-    margin: "10px 0"
+    margin: "10px 0",
+    borderRadius: "15px"
   }
 }));
 
@@ -40,7 +41,7 @@ export default function BasicTextFields() {
 
   return (
     <>
-      <div className={classes.root}>
+      <div id="kontakt" className={classes.root}>
         <Typography
           gutterBottom
           variant="h3"
@@ -49,43 +50,48 @@ export default function BasicTextFields() {
         >
           Kontakt
         </Typography>
-        <Typography gutterBottom variant="p" component="p">
+        <Typography
+          gutterBottom
+          variant="body2"
+          component="p"
+          style={{ textAlign: "center", marginBottom: "50px" }}
+        >
           Wypełnij formularz, skontaktujemy się z Wami w ciągu dwóch dni
-          roboczycg
+          roboczych. Napisz już dziś!
         </Typography>
         <Grid container spacing={0} justify="center">
           <Grid item md={10}>
             <form noValidate autoComplete="off">
               <TextField
                 className={classes.form}
-                id="outlined-basic"
+                // id="outlined-basic"
                 label="Imię & Nazwisko"
                 variant="outlined"
               />
               <TextField
                 className={classes.form}
-                id="outlined-basic"
+                // id="outlined-basic"
                 label="Numer Telefonu"
                 variant="outlined"
               />
               <TextField
                 className={classes.form}
-                id="outlined-basic"
+                // id="outlined-basic"
                 label="Email"
                 variant="outlined"
               />
-              <TextareaAutosize
+              <TextField
                 className={classes.form}
-                aria-label="minimum height"
-                rowsMin={8}
-                placeholder="Napisz wiadomość"
+                // id="standard-multiline-static"
+                label="Napisz wiadomość.."
+                multiline
+                rows="4"
+                variant="outlined"
               />
+
               <FormControlLabel
-                className={classes.form}
-                value="start"
-                control={<Checkbox color="primary" />}
-                label="Start"
-                labelPlacement="start"
+                control={<Checkbox value="checkedB" color="primary" />}
+                label="Akceptuję politykę prywatności"
               />
             </form>
           </Grid>
