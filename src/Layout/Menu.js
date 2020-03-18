@@ -19,21 +19,18 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import Link from "@material-ui/core/Link";
 import { Typography } from "@material-ui/core";
 
-const icons = [
+const menu = [
   {
-    icon: <PlayCircleOutlineIcon />
+    name: "Oferta",
+    id: "#oferta"
   },
   {
-    icon: <AssignmentIndIcon />
+    name: "Kancelaria",
+    id: "#kancelaria"
   },
   {
-    icon: <FlightTakeoffIcon />
-  },
-  {
-    icon: <LocalOfferIcon />
-  },
-  {
-    icon: <ImageIcon />
+    name: "Jak to działa?",
+    id: "#jakDziala"
   }
 ];
 
@@ -45,9 +42,12 @@ const useStyles = makeStyles({
     width: "auto"
   },
   nav: {
-    position: "fixed",
+    position: "absolute",
     top: "0",
     left: "0"
+  },
+  link: {
+    textDecoration: "none"
   },
   button: {
     margin: "10px 20px",
@@ -98,18 +98,15 @@ export default function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(side, false)}
     >
       <List>
-        {["Start", "Kancelaria", "Oerta", "Jak to działa", "cosstam"].map(
-          (text, index) => (
-            <ListItem button key={text}>
-              <AnchorLink href={"#" + text}>
-                <ListItemIcon>{icons[index].icon}</ListItemIcon>
-                <Link>
-                  <ListItemText primary={text} />
-                </Link>
-              </AnchorLink>
-            </ListItem>
-          )
-        )}
+        {menu.map(item => (
+          <ListItem button key={item.id}>
+            <AnchorLink className={classes.link} href={item.id}>
+              <Typography color="primary" variant="h6" component="p">
+                {item.name}
+              </Typography>
+            </AnchorLink>
+          </ListItem>
+        ))}
       </List>
 
       <Divider />
@@ -117,13 +114,13 @@ export default function SwipeableTemporaryDrawer() {
       <List>
         {["Kontakt"].map((text, index) => (
           <ListItem button key={text}>
-            <AnchorLink href="#kontakt">
-              <Link>
-                <ListItemText primary={text} />
-              </Link>
+            <AnchorLink className={classes.link} href={"#kontakt"}>
+              <Typography color="primary" variant="h6" component="p">
+                {text}
+              </Typography>
             </AnchorLink>
             <ListItemIcon>
-              <MailIcon />
+              <MailIcon color="primary" style={{ marginLeft: "20px" }} />
             </ListItemIcon>
           </ListItem>
         ))}
@@ -147,6 +144,22 @@ export default function SwipeableTemporaryDrawer() {
         onOpen={toggleDrawer("left", true)}
       >
         {sideList("left")}
+        <div
+          style={{
+            position: "absolute",
+            left: "0",
+            bottom: "0",
+            margin: "0 0 50px 16px",
+            color: "rgba(0, 194, 255, 0.5)"
+          }}
+        >
+          <Typography variant="h2" component="p">
+            Paweł
+          </Typography>
+          <Typography variant="h2" component="p" style={{ fontWeight: "600" }}>
+            Sterna
+          </Typography>
+        </div>
       </SwipeableDrawer>
     </div>
   );

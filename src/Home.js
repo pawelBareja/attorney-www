@@ -7,6 +7,7 @@ import Footer from "./Layout/Footer";
 import About from "./Components/About";
 import Form from "./Components/Form";
 import ScrollToTop from "./Components/ScrollToTop";
+import Cookies from "./Layout/Cookies";
 
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
@@ -16,16 +17,23 @@ const theme = createMuiTheme({
     fontFamily: ["Poppins", "sans-serif"].join(","),
     h1: {
       fontWeight: "100",
-      fontSize: "5rem",
+      fontSize: "4.2rem",
       lineHeight: "1"
       // marginBottom: "20px"
     },
     h3: {
       fontWeight: "100",
-      textAlign: "center"
+      textAlign: "center",
+      ["@media (max-width:768px)"]: {
+        fontSize: "2rem"
+      }
     },
     p: {
       fontSize: "16px"
+    },
+    h6: {
+      textTransform: "uppercase",
+      fontWeight: "200"
     },
     body1: {
       fontSize: "16px",
@@ -58,6 +66,7 @@ function Home() {
         <Form />
         <Footer />
         <ScrollToTop />
+        <Cookies />
       </ThemeProvider>
     </>
   );

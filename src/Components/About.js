@@ -41,7 +41,7 @@ export default function MediaCard() {
   const classes = useStyles();
 
   return (
-    <Card id={"Kancelaria"} className={classes.root}>
+    <Card id={"kancelaria"} className={classes.root}>
       <Typography className={classes.title} variant="h3" component="h3">
         Dlaczego My?
       </Typography>

@@ -87,7 +87,7 @@ export default function VerticalLinearStepper() {
   };
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} id="jakDziala">
       <Grid container>
         <Grid item xs={12}>
           <Paper className={classes.paper}>

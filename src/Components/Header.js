@@ -50,10 +50,10 @@ const useStyles = makeStyles(theme => ({
     // background: "#fff",
     // border: "none",
     position: "absolute",
-    bottom: "-2px",
+    bottom: "10px",
     left: "50%",
     transform: "translateX(-50%)",
-    borderRadius: "4px 4px 0 0",
+    borderRadius: "4px",
     color: "rgba(1,1,1,0.1)"
   }
 }));
