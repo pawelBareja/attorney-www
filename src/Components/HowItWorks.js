@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     margin: "30px 0"
   },
   title: {
-    margin: "50px 10px",
+    margin: "80px 10px 50px",
     wordWrap: "break-word",
     position: "relative",
     "&::before": {
@@ -33,23 +33,21 @@ const useStyles = makeStyles(theme => ({
   button: {
     marginTop: theme.spacing(2),
     marginRight: theme.spacing(2)
-    // color: "#fff"
   },
-  actionsContainer: {
-    // marginBottom: theme.spacing(2)
-  },
+  actionsContainer: {},
   resetContainer: {
     padding: theme.spacing(3)
   },
   paper: {
-    // padding: theme.spacing(2),
     textAlign: "left",
-    // color: theme.palette.text.secondary,
-    boxShadow: "none"
+    boxShadow: "none",
+    background: "#ededed",
+    borderRadius: "10px",
+    overflow: "hidden"
+  },
+  stepper: {
+    background: "#ededed"
   }
-  // icon: {
-  //   background: "red"
-  // }
 }));
 
 function getSteps() {
@@ -95,7 +93,11 @@ export default function VerticalLinearStepper() {
               Jak to działa?
             </Typography>
 
-            <Stepper activeStep={activeStep} orientation="vertical">
+            <Stepper
+              activeStep={activeStep}
+              orientation="vertical"
+              className={classes.stepper}
+            >
               {steps.map((label, index) => (
                 <Step key={label}>
                   <StepLabel>{label}</StepLabel>
