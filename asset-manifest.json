@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/pawelBareja/attorney-www.git/static/css/main.bef6fb32.chunk.css",
+    "main.js": "/pawelBareja/attorney-www.git/static/js/main.acd08f83.chunk.js",
+    "main.js.map": "/pawelBareja/attorney-www.git/static/js/main.acd08f83.chunk.js.map",
+    "runtime-main.js": "/pawelBareja/attorney-www.git/static/js/runtime-main.e066731d.js",
+    "runtime-main.js.map": "/pawelBareja/attorney-www.git/static/js/runtime-main.e066731d.js.map",
+    "static/css/2.5c3abc04.chunk.css": "/pawelBareja/attorney-www.git/static/css/2.5c3abc04.chunk.css",
+    "static/js/2.13634fc4.chunk.js": "/pawelBareja/attorney-www.git/static/js/2.13634fc4.chunk.js",
+    "static/js/2.13634fc4.chunk.js.map": "/pawelBareja/attorney-www.git/static/js/2.13634fc4.chunk.js.map",
+    "index.html": "/pawelBareja/attorney-www.git/index.html",
+    "precache-manifest.7697fcc18eb489c720bb87bfb2d6de21.js": "/pawelBareja/attorney-www.git/precache-manifest.7697fcc18eb489c720bb87bfb2d6de21.js",
+    "service-worker.js": "/pawelBareja/attorney-www.git/service-worker.js",
+    "static/css/2.5c3abc04.chunk.css.map": "/pawelBareja/attorney-www.git/static/css/2.5c3abc04.chunk.css.map",
+    "static/css/main.bef6fb32.chunk.css.map": "/pawelBareja/attorney-www.git/static/css/main.bef6fb32.chunk.css.map",
+    "static/js/2.13634fc4.chunk.js.LICENSE.txt": "/pawelBareja/attorney-www.git/static/js/2.13634fc4.chunk.js.LICENSE.txt",
+    "static/media/1600x900k.png": "/pawelBareja/attorney-www.git/static/media/1600x900k.a5a2efc0.png",
+    "static/media/car.jpg": "/pawelBareja/attorney-www.git/static/media/car.e5894d6b.jpg",
+    "static/media/klotnia.jpg": "/pawelBareja/attorney-www.git/static/media/klotnia.cedddfa9.jpg",
+    "static/media/plane.jpg": "/pawelBareja/attorney-www.git/static/media/plane.80877c4e.jpg",
+    "static/media/styles.css": "/pawelBareja/attorney-www.git/static/media/revicons.2feb69cc.eot"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e066731d.js",
+    "static/css/2.5c3abc04.chunk.css",
+    "static/js/2.13634fc4.chunk.js",
+    "static/css/main.bef6fb32.chunk.css",
+    "static/js/main.acd08f83.chunk.js"
+  ]
+}
