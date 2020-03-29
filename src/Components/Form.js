@@ -50,8 +50,6 @@ export default function BasicTextFields() {
   const handleSubmit = e => {
     e.preventDefault();
 
-
-    
     alert(
       `Submitting Name ${name}, and ${phone}, and ${email}, and ${message}, i and ${consent}`
     );
@@ -82,7 +80,6 @@ export default function BasicTextFields() {
             <form noValidate autoComplete="off">
               <TextField
                 className={classes.form}
-                // id="outlined-basic"
                 label="Imię & Nazwisko"
                 variant="outlined"
                 value={name}
@@ -90,7 +87,6 @@ export default function BasicTextFields() {
               />
               <TextField
                 className={classes.form}
-                // id="outlined-basic"
                 label="Numer Telefonu"
                 variant="outlined"
                 value={phone}
@@ -98,7 +94,6 @@ export default function BasicTextFields() {
               />
               <TextField
                 className={classes.form}
-                // id="outlined-basic"
                 label="Email"
                 variant="outlined"
                 value={email}
@@ -106,7 +101,6 @@ export default function BasicTextFields() {
               />
               <TextField
                 className={classes.form}
-                // id="standard-multiline-static"
                 label="Napisz wiadomość.."
                 multiline
                 rows="4"

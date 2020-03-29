@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import image from "../images/pokrywanie2.jpg";
-import imageBig from "../images/1600x900.jpg";
+import imageBig from "../images/1600x900k.png";
 import { Typography } from "@material-ui/core";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import chevron from "../images/chevron.png";
@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
   head: {
     height: "100vh",
     background: `url(${imageBig})`,
-    backgroundPosition: "center",
+    backgroundPosition: "center right",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover"
   },
