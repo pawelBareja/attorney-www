@@ -5,7 +5,7 @@ import Offer from "./Components/Offer";
 import HowItWorks from "./Components/HowItWorks";
 import Footer from "./Layout/Footer";
 import About from "./Components/About";
-import Form from "./Components/Form";
+import Form2 from "./Components/Form2";
 import ScrollToTop from "./Components/ScrollToTop";
 import Cookies from "./Layout/Cookies";
 
@@ -22,11 +22,12 @@ const theme = createMuiTheme({
       // marginBottom: "20px"
     },
     h3: {
+      marginTop: "80px",
       fontWeight: "100",
-      textAlign: "center",
-      ["@media (max-width:768px)"]: {
-        fontSize: "2rem"
-      }
+      textAlign: "center"
+      // ["@media (max-width:768px)"]: {
+      //   fontSize: "2rem"
+      // }
     },
     p: {
       fontSize: "16px"
@@ -63,7 +64,7 @@ function Home() {
         <Offer />
         <About />
         <HowItWorks />
-        <Form />
+        <Form2 />
         <Footer />
         <ScrollToTop />
         <Cookies />

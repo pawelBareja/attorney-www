@@ -6,17 +6,9 @@ import List from "@material-ui/core/List";
 import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
 import MailIcon from "@material-ui/icons/Mail";
 import MenuIcon from "@material-ui/icons/Menu";
-import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
-import AssignmentIndIcon from "@material-ui/icons/AssignmentInd";
-import FlightTakeoffIcon from "@material-ui/icons/FlightTakeoff";
-import LocalOfferIcon from "@material-ui/icons/LocalOffer";
-import ImageIcon from "@material-ui/icons/Image";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import Link from "@material-ui/core/Link";
 import { Typography } from "@material-ui/core";
 
 const menu = [
@@ -36,7 +28,8 @@ const menu = [
 
 const useStyles = makeStyles({
   list: {
-    width: 250
+    width: 250,
+    paddingTop: "80px"
   },
   fullList: {
     width: "auto"
@@ -58,13 +51,8 @@ const useStyles = makeStyles({
       content: "'MENU'",
       display: "block",
       position: "absolute",
-
-      // height: "2px",
-      // width: "60px",
       left: "15px",
-      // transform: "translateX(-50%)",
       bottom: "-12px"
-      // background: "#00c2ff"
     }
   }
 });
@@ -72,9 +60,6 @@ const useStyles = makeStyles({
 export default function SwipeableTemporaryDrawer() {
   const classes = useStyles();
   const [state, setState] = React.useState({
-    // top: false,
-    // left: false,
-    // bottom: false,
     left: false
   });
 
@@ -154,10 +139,10 @@ export default function SwipeableTemporaryDrawer() {
           }}
         >
           <Typography variant="h2" component="p">
-            Paweł
+            Anna
           </Typography>
           <Typography variant="h2" component="p" style={{ fontWeight: "600" }}>
-            Sterna
+            Kowal
           </Typography>
         </div>
       </SwipeableDrawer>

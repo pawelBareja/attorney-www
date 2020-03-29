@@ -1,14 +1,9 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import Link from "@material-ui/core/Link";
 
 const useStyles = makeStyles({
   root: {
@@ -17,7 +12,7 @@ const useStyles = makeStyles({
     boxShadow: "none"
   },
   title: {
-    margin: "50px 10px",
+    margin: "80px 10px 50px",
     wordWrap: "break-word",
     position: "relative",
     "&::before": {
@@ -47,33 +42,36 @@ export default function MediaCard() {
       </Typography>
       <Typography variant="body2" component="p" gutterBottom>
         <strong>
-          Nadzwyczajna skuteczność działań prawnych. Obsługa osób fizycznych i
-          firm. Prawo cywilne. Prawo pracy. Prawo karne Rozwód. Prawo rodzinne.
-          Odszkodowania. Prawo gospodarcze. Usługi: Pozyskiwanie dowodów
+          Here are many variations of passages of Lorem Ipsum available, but the
+          majority have suffered alteration in some form, by injected humour, or
+          randomised words which don't look even slightly believable. If you are
+          going to use a passage of Lorem Ipsum, you need to be sure there isn't
+          anything embarrassing hidden in the middle of text.
         </strong>
       </Typography>
       <Typography gutterBottom variant="body2" component="p">
-        Nadzwyczajna skuteczność działań prawnych. Obsługa osób fizycznych i
-        firm. Prawo cywilne. Prawo pracy. Prawo karne. Rozwód. Prawo rodzinne.
-        Odszkodowania. Prawo gospodarcze. Usługi: Pozyskiwanie dowodów,
-        Obserwacje osobowe, Windykacja, Sprawy gospodarcze.Nadzwyczajna
-        skuteczność działań prawnych. Obsługa osób fizycznych i firm. Prawo
-        cywilne. Prawo pracy. Prawo karne. Rozwód. Prawo rodzinne.
-        Odszkodowania. Prawo gospodarcze. Usługi: Pozyskiwanie dowodów,
-        Obserwacje osobowe, Windykacja, Sprawy gospodarcze.
+        Here are many variations of passages of Lorem Ipsum available, but the
+        majority have suffered alteration in some form, by injected humour, or
+        randomised words which don't look even slightly believable. If you are
+        going to use a passage of Lorem Ipsum, you need to be sure there isn't
+        anything embarrassing hidden in the middle of text. All the Lorem Ipsum
+        generators on the Internet tend to repeat predefined chunks as
+        necessary, making this the first true generator on the Internet. It uses
+        a dictionary of over 200 Latin words, combined with a handful of model
+        sentence structures, to generate Lorem Ipsum which looks reasonable.
       </Typography>
 
       <AnchorLink href={"#kontakt"} style={{ textDecoration: "none" }}>
-        <Link>
-          <Button
-            className={classes.button}
-            variant="contained"
-            color="primary"
-            style={{ color: "#fff", marginTop: "20px" }}
-          >
-            Skontaktuj się z nami
-          </Button>
-        </Link>
+        {/* <Link> */}
+        <Button
+          className={classes.button}
+          variant="contained"
+          color="primary"
+          style={{ color: "#fff", marginTop: "20px" }}
+        >
+          Skontaktuj się ze mną
+        </Button>
+        {/* </Link> */}
       </AnchorLink>
     </Card>
   );

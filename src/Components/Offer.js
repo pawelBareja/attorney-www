@@ -1,21 +1,13 @@
 import React from "react";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
-// import image from "../images/przezroczyste.png";
 import { Typography } from "@material-ui/core";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
-
 import img1 from "../images/klotnia.jpg";
 import img2 from "../images/plane.jpg";
 import img3 from "../images/car.jpg";
-import img4 from "../images/klotnia.jpg";
-
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
@@ -24,7 +16,7 @@ const useStyles = makeStyles({
     margin: "10px"
   },
   title: {
-    margin: "50px 10px",
+    margin: "80px 10px 50px",
     wordWrap: "break-word",
     position: "relative",
     "&::before": {
@@ -49,7 +41,6 @@ const useStyles = makeStyles({
     boxShadow: "0px 0px 7px 1px rgba(189,189,189,1)"
   },
   media: {
-    // width: "380px",
     height: "230px"
   },
   cardContent: {
